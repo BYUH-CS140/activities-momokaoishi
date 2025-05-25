@@ -1,12 +1,32 @@
 /* This style sets dark brown for all paragraphs */
+
+
 p { 
     color:#712b12; 
-
 } 
 
-/* Makes headers bold and 24px */
-.header-style { 
-    font-weight: bold; font-size: 24px; 
+header {
+    background-image: url(../images/background2.jpg);
+    padding: 10px;
+}
+
+/*  Gives beige background and brown color for texts */
+h1 { 
+    color: #712b12; 
+    text-align: center;
+    font-size: 35px;
+}
+
+ /* Makes the name of the recepi orange */
+h2 { 
+    color: #f66a37;
+    text-align: center;
+    font-size: 25px;
+}
+
+h3 {
+    color: rgb(1, 45, 1);
+    text-align: center;
 }
 
 /* This style gives brown background color and the same thickness to horizontal line */
@@ -14,45 +34,87 @@ p {
     background-color: #712b12; height: 3px; 
 }
 
-
-/*  Gives beige background and brown color for texts */
-.hf-color { 
-    background-color: #cc7c0d44;  color: #712b12; 
+.nav-list {
+    list-style: none;
+    color: rgb(1, 45, 1);
+    display: flex; 
+    gap: 30px;
+    justify-content: center;
+}
+ 
+.nav-list a {
+    text-decoration: none;
+    color: rgb(1, 45, 1);
 }
 
-/* Makes the name of the recepi orange */
-#recepi-name { 
-    color: #f66a37;
- }
+.nav-list > li {
+    padding-right: 35px;
+}
 
- /* Makes body color light beige */
+.nav-list > li:nth-child(2) {
+    padding-left: 5px;
+}
+
+.nav-list a {
+    font-size: 16px;
+}
+
+.nav-list a:hover {
+    color: rgb(222, 101, 31);
+  }
+
+/* Makes body color light beige */
 body { 
     background-color: antiquewhite; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.unordered {
+    padding-left: 280px;
+}
+
+ol {
+    padding-left: 200px;
+}
+
+li {
+    color: rgb(1, 45, 1);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 25px;
+    width: 580px; 
+    height: 400px;
+}
+
+.resources {
+    padding: 10px; 
+    border-radius: 15px; 
+    background-color: #cc7c0d44; 
+    width: 60%;
+    padding-left: 260px;
+}
+
+.resources li {
+    margin-bottom: 15px;
 }
 
 /* Set the size of the video and removes border */
 #video { 
     width: 500px; height: 315px; border: none; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
 }
 
-header {
-    background-image: url(../images/background2.jpg)
-}
-
-ol li:nth-child(8) {
-    font-weight: bold;
-  }
-
-div {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-
-h1 {
+footer {
+    background-color: #cc7c0d44; 
     text-align: center;
 }
 
-a:hover {
-    color: rgb(222, 101, 31);
-  }
+
+  
