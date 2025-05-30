@@ -1,7 +1,7 @@
 body {
   background-color: forestgreen;
   margin: 0;
-  font-family: Gil Sans;
+  font-family: Gill Sans;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
   margin: 0;
 }
 
-.nav {
+nav {
   background-color: #2e1a1a;
   width: 100%;
   margin: 0;
@@ -59,7 +59,7 @@ main {
   border: 5px solid brown;
   border-radius: 30px;
   box-shadow: 5px 5px 15px grey;
-  height: 30px;
+  height: 30%;
   width: 30%;
 }
 
