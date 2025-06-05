@@ -120,8 +120,11 @@ p {
 
 .grid-item {
     padding: 5px;
+    font-size: 16px;
+    display: flex;
     text-align: center;
-    font-size: 18px;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-img {
