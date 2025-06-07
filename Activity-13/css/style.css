@@ -38,21 +38,20 @@ nav {
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 20px;
-
+    width: 60%;
 }
 
 .nav-list {
     align-items: center;
     justify-content: center;
-    align-items: center;  
     margin: 0 auto;
+    padding: 0;
 }
 
 .nav-list li {
     list-style: none;
     color: rgb(1, 45, 1);
-    border-radius: 5px;
-    gap: 1rem;
+    border-radius: 5px;   
     margin: 10px;
     background-color: #eac5ab;
     padding: 10px;
@@ -92,8 +91,7 @@ p {
 }
 
 .container {
-    display: flex;
-    margin-left: 20px;
+    display: flex; 
 }
 
 #img2 {
@@ -110,7 +108,7 @@ p {
 .instructions {
     text-align: center;
 }
-  
+
 .instructions ol {
     display: inline-block;
     text-align: left;
@@ -146,12 +144,13 @@ p {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    list-style: none;
 }
 
-.resources li {
-    margin: 15px 150px;
-    display: inline-block;
-    text-align: left;    
+.resources li {  
+    align-items: center;
+    justify-content: center;
+    margin: 10px;   
 }
 
 /* Set the size of the video and removes border */
@@ -167,20 +166,26 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 768px) {
     body {
-      font-size: 16px;
+      font-size: 17px;
+    }
+
+    nav {
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #eac5ab;
+        height: 3.5rem;
     }
 
     .nav-list {
         list-style: none;
         color: rgb(1, 45, 1);
-        display: flex; 
-        gap: 4rem;
+        display: flex;  
         justify-content: center;
-        padding: 10px;
-    }
 
+    }
 
     #img1 {
         width: 50%;
@@ -192,24 +197,23 @@ footer {
     body {
       font-size: 16px;
     }
-
-    nav {
-        height: 40px;
-        width: 600px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-
-    }
     
+    nav {
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #eac5ab;
+        height: 3.5rem;
+        width: 40%;
+    }
+
     .nav-list {
         list-style: none;
         color: rgb(1, 45, 1);
-        display: flex; 
-        gap: 4rem;
+        display: flex;  
         justify-content: center;
-        padding: 10px;
-    }
 
+    }
     #img1 {
         width: 50%;
     }
