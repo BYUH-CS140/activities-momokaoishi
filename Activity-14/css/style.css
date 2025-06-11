@@ -78,10 +78,6 @@ body {
 
     }
 
-section {
-    grid-area: main;
-}
-
 li {
     color: rgb(1, 45, 1);
 }
