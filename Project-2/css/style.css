@@ -25,15 +25,15 @@ h2 {
 
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 10px;
+    margin: 1.5rem;
     font-size: 20px;
 }
 
 body {
-  background-color: rgb(206, 233, 250);
+  background-color: rgb(255, 255, 255);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 10px;
-  background-image: url(../images/background.jpg);
+
 }
 
 section {
@@ -58,7 +58,6 @@ nav li {
   height: 2em;
   display: flex;              /* Flexbox を使う */
   align-items: center;      /* 縦方向中央揃え */
-  padding-left: 10px;
 }
 
 nav li:hover {
@@ -101,7 +100,10 @@ footer{
 
 @media screen and (min-width: 768px) {
   p {
-    font-size: 17px;
+    font-size: 20px;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    line-height: 1.7rem;
   }
 
   header {
@@ -120,25 +122,60 @@ footer{
     justify-content: center;
     gap: 25px;
   }
-  
 
-  img {
-      width: 50%;
-  
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "item1 item1"
+    "item5 item6"
+    "item7 item7";
+    gap: 2rem;
+    object-fit: cover;
   }
 
+  .gallery img {
+    width: 100%;
+    height: 200px;         /* 必ず高さを指定する必要があります！ */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .item1 {
+    grid-area: item1;
+}
+
+  .item5 {
+    grid-area: item5;
+    padding-left: 1.5rem;
+  }
+
+  .item6 {
+    grid-area: item6;
+    padding-right: 2rem;
+  }
+
+  .item7 {
+    padding-top: 0.3rem;
+    grid-area: item7;
+    padding-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.7rem;
+    margin: 1rem;
+    margin-right: 2rem;
   }
-  
+
+
   header {
     background-image: url(../images/background2.png);
     background-size: auto;
-
-    height: 10rem;
+    height: 10em;
   }
 
   nav {
@@ -148,10 +185,86 @@ footer{
   }
 
   img {
-      width: 40%;
+      width: 100%;
+  }
+  
+  section {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-areas: 
+     "item1 item1"
+     "item2 item3"
+     "item2 item4";
+     padding-bottom: 3rem;
+  }
+
+  .item1 {
+      grid-area: item1;
+  }
+
+  .item2 {
+    padding-left: 5rem;
+    grid-area: item2;
+    padding-bottom: 2rem; 
+  }
+
+  .item3 {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    width: 90%;
+    grid-area: item3;
+  }
+
+  .item4 {
+    grid-area: item4;
+    display: flex;
+    flex-direction: column;     /* 子要素を縦に並べる */
+    align-items: center;        /* 横方向の中央揃え */
+    text-align: center;    
+  }
+
+  .item4 ul li{
+    text-align: left;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "item1 item1 item1"
+    "item5 item6 item7";
+    object-fit: cover;
+    gap: 1rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 300px;         /* 必ず高さを指定する必要があります！ */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .item5 {
+    margin-left: 2rem;
+    grid-area: item5;
+  }
+
+  .item6 {
+    grid-area: item6;
+    
+  }
+
+  .item7 {
+    grid-area: item7;
+  }
+
+  .item5,
+  .item6 {
+    padding: 0;
+  }
+  figcaption {
+    margin-top: 1rem;
   }
 }
-  
-
-
-
