@@ -130,13 +130,13 @@ footer{
     "item1 item1"
     "item5 item6"
     "item7 item7";
-    gap: 2rem;
+    gap: 0.2rem;
     object-fit: cover;
   }
 
   .gallery img {
     width: 100%;
-    height: 200px;         /* 必ず高さを指定する必要があります！ */
+    height: 220px;       
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -234,37 +234,46 @@ footer{
     "item1 item1 item1"
     "item5 item6 item7";
     object-fit: cover;
-    gap: 1rem;
+    gap: 0.2rem;
+    padding: 0;
   }
 
   .gallery img {
     width: 100%;
-    height: 300px;         /* 必ず高さを指定する必要があります！ */
+    height: 300px;         
     object-fit: cover;
     display: block;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
   }
 
   .item5 {
-    margin-left: 2rem;
     grid-area: item5;
+    margin-left: 2rem;
   }
 
   .item6 {
     grid-area: item6;
-    
+    margin-left: 1rem;
   }
 
   .item7 {
+    margin-left: 1rem;
     grid-area: item7;
+  }
+
+  figure { 
+    margin: 0;
   }
 
   .item5,
   .item6 {
     padding: 0;
+
   }
+
   figcaption {
     margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 }
