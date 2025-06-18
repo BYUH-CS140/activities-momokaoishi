@@ -8,7 +8,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     var usernameValid = /^[a-zA-Z0-9]{5,}$/.test(username); // Username should be at least 5 characters long and contain only letters and numbers
     var emailValid = /^[^@]+@\w+(\.\w+)+\w$/.test(email); // Simple email pattern check
-    var phoneValid = /^\d{10,11}$/.test(phone);.test(phone); // Simple phone number pattern check
+    var phoneValid = /^\+?\d{1,4}?[-.\s]?(\(?\d{1,4}\)?[-.\s]?)*\d{3,4}[-.\s]?\d{3,4}$/.test(phoneNumber); // Simple phone number pattern check
     var passwordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password); // Password should be at least 8 characters long, contain numbers and both lowercase and uppercase letters
 
     document.getElementById('usernameFeedback').style.display = usernameValid ? 'none' : 'block';
