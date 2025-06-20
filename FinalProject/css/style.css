@@ -192,7 +192,6 @@ h3 {
 }
 
 
-
 @media screen and (min-width: 768px) {
     #introimg {
         width: 600px;
@@ -212,6 +211,20 @@ h3 {
         max-width: 630px;
    }
 
+   .resume {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 3rem;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 2rem 1rem;
+    }
+
+    .resume > div {
+        flex: 1;                       
+        max-width: 300px;             
+    }
    
 }
 
@@ -296,11 +309,18 @@ h3 {
     
     .resume {
         display: flex;
-        align-items: center; 
-        margin-left: 200px;
-        gap: 3rem;
+        justify-content: center; 
+        align-items: flex-start;
+        gap: 5rem; 
+        max-width: 1000px; /
+        margin: 0 auto; 
+        padding: 2rem 1rem;
     
     }
 
+    .resume > div {
+        flex: 1;                        
+        max-width: 300px;              
+      }
 }   
 
