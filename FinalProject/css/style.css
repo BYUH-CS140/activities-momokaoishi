@@ -8,8 +8,8 @@ body {
     font-size: 17px;
     font-family: sans-serif;
     font-weight: lighter;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 header {
@@ -18,16 +18,24 @@ header {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.spacer {
+    flex: 1;
 }
 
 header a {
     text-decoration: none;
     color: white;
     display: flex;
-    align-items: center;
-    padding-left: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+header ul li a{
+    font-weight: lighter;
 }
 
 button {
@@ -37,7 +45,9 @@ button {
 #toggleButton {
     background-color: transparent; 
     border: none;
-    margin-right: 2rem;
+    margin-left: auto;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 #bar {
@@ -50,12 +60,17 @@ button {
 }
 
 #nav-bar {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
+    position: fixed;
+    top: 4.5rem; /* headerの下から出す */
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: #626F47;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    flex-direction: column;
 }
 
 #nav-bar.active {
@@ -74,10 +89,6 @@ button {
 
 #nav-bar a:hover {
     color: #F0BB78;
-}
-
-.nav-links {
-    display: none;
 }
 
 #closeButton {
@@ -117,9 +128,11 @@ h1 {
 h2 {
     display: block;
     text-align: center;
-    font-size: 22px;
+    font-size: 27px;
     font-weight: lighter;
-    margin: 1rem;
+    margin: 2.5rem auto 2rem auto;
+    margin-top: 2.5rem;
+
 }
 
 p {
@@ -136,8 +149,7 @@ img {
 
 footer {
     background-color: #626F47;
-    display: block;
-    align-items: center;
+    margin-top: auto;
     height: 4.5rem;
 }
 
@@ -152,6 +164,10 @@ footer a {
     text-decoration: none;
     margin: 0.3rem;
     font-size: 1.4rem;
+}
+
+.projects {
+    margin-bottom: 3.3rem;
 }
 
 .contactinfo {
@@ -170,7 +186,7 @@ h3 {
     font-weight: lighter;
     margin: 1rem auto;
     max-width: 470px;
-    
+    font-size: 22px;
 }
 
 .links {
@@ -187,8 +203,95 @@ h3 {
     color: #F0BB78;
 }
 
-.fix {
-    height: 81vh;
+.form-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 480px;
+    margin: 20px auto 30px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 530px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    color: #555;
+}
+
+input {
+    width: 418px; 
+    height: 25px;
+}
+
+textarea {
+    width: 418px;
+    height: 250px;
+}
+  
+button {
+    display: flex;
+    margin: 20px auto;
+    background-color: #626F47;
+    color: white;
+    border: none;
+    padding: 12px 39px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    
+}
+  
+button:hover {
+    background-color: #F0BB78;
+}
+  
+#formMessage {
+    margin-top: 15px;
+    color: #A4B465;
+    font-weight: bold;
+}
+
+.contact {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+main ul li {
+    margin: 0 auto auto auto;
+    line-height: 1.6;
+    width: 470px;
+}
+
+h4 {
+    font-weight: lighter;
+    margin: 1rem auto 0.5rem auto;
+    max-width: 470px;
+    font-size: 19px;
+}
+
+.education, .work, .award {
+    margin-bottom: 3rem;
+}
+
+.wrapper {
+    background-color: #F5ECD5;
+    padding: 2.5rem 0 1.5rem 0;
+}
+
+.java {
+    width: 300px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    margin-bottom: 2rem;
 }
 
 
@@ -206,17 +309,14 @@ h3 {
         width: 650px;
     }
   
-   h3 {
-        margin-top: 2rem;
-        max-width: 630px;
-   }
+    h3 {
+        max-width: 650px;
+        margin: 0 auto 1rem auto;
+    }
 
    .resume {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
     gap: 3rem;
-    max-width: 1000px; 
+    max-width: 600px; 
     margin: 0 auto; 
     padding: 2rem 1rem;
     }
@@ -225,27 +325,53 @@ h3 {
         flex: 1;                       
         max-width: 300px;             
     }
-   
+
 }
 
 @media screen and (min-width: 1024px) { 
-
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        margin-right: 2rem;
+    #toggleButton {
+      display: none;
     }
 
-    .nav-links li {
+    #closeButton {
+       display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4rem 0 5rem;
+    }
+    
+    #nav-bar {
+        position: static;         /* 親(header)内に戻す */
+        display: block;
+        height: auto;
+        width: auto;
+        max-height: none;
+        background-color: transparent;
+
+    }
+
+    #nav-bar ul {
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-bar li {
         list-style: none;
       }
     
-    .nav-links a {
-        text-decoration: none;
+    #nav-bar a {
         color: white;
-        font-weight: bold;
-    }
+        text-decoration: none;
+        font-weight: lighter;
+        font-size: 16px;
+        padding: 0.5rem 0;
+      }
 
     .intro {
         display: flex;
@@ -262,7 +388,6 @@ h3 {
         font-size: 30px;
         width: 35%;
         padding-right: 4rem;
-
     }
 
     h2 {
@@ -276,6 +401,14 @@ h3 {
         width: 1000px;
         gap: 8.5rem;
         margin: 2.5rem auto;
+    }
+
+    .mainlayout p {
+        margin-top: 2rem;
+    }
+
+    .wrapper {
+        padding: 1rem 0 1rem 0;
     }
 
     p {
@@ -299,12 +432,35 @@ h3 {
 
     .projects {
         display: flex;
-        align-items: center;
+        justify-content: center;   /* ← 全体を中央に揃える */
+        align-items: center;       /* ← 高さを揃える（任意） */
+        margin-bottom: 4.5rem;
+        text-align: left;
+    }
+
+    .projects p {
+        margin-left: 18rem;
+        width: 580px;
+        padding-right: 20px;
+    }
+
+    .links {
+        margin-right: 16rem;
+        display: flex;                 
+        justify-content: center;      
+        align-items: center;   
+        text-align: center; 
+        height: 60px;   
+        width: 158px;      
+    }
+
+    main a {
+        margin: 0;
     }
 
     h3 {
-        margin-top: 2rem;
-        max-width: 920px;
+        max-width: 1000px;
+        margin-left: 18rem;
     }     
     
     .resume {
@@ -312,7 +468,7 @@ h3 {
         justify-content: center; 
         align-items: flex-start;
         gap: 5rem; 
-        max-width: 1000px; /
+        max-width: 1000px; 
         margin: 0 auto; 
         padding: 2rem 1rem;
     
@@ -322,5 +478,64 @@ h3 {
         flex: 1;                        
         max-width: 300px;              
       }
+
+    .contactcontainer {
+        display: flex;
+        justify-content: center;
+        width: 1300px;
+        gap: 3rem;
+        margin: 1.5rem auto;
+    }
+
+    .contact {
+        font-size: 25px;
+    }
+
+    .form-container {
+        max-width: 550px;
+    }
+    
+    input, textarea {
+        width: 450px; 
+        margin-left: 20px;
+    }
+
+    label {
+        margin-left: 20px;
+    }
+
+    .resume {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+         "item1 item2"
+         "item3 item2";
+    }
+
+    .education {
+        grid-area: item1;
+    }
+
+    .work {
+        grid-area: item2;
+    }
+
+    .award p {
+        grid-area: item3;
+        width: 450px;
+    }
+
+    .hresume {
+        margin-left: 0;
+    }
+
+    .buttons {
+        display: flex;
+        margin: 0.5rem auto;
+        gap: 1.5rem;
+        width: 1050px;
+    }
 }   
+
+
 

@@ -10,17 +10,20 @@
     <body>
         <header>
             <a href="../FinalProject/home.html">Momoka Oishi</a>
-            <button id="toggleButton"><i id="bar" class="fa-solid fa-bars"></i></button>
-        </header>
-        <nav id="nav-bar">
-            <ul>
-                <li><a href="../FinalProject/project.html">Projects</a></li>
-                <li><a href="../FinalProject/resume.html">Resume</a></li>
-                <li><a href="../FinalProject/volunteer.html">Volunteer Experience</a></li>
-                <li><a href="../FinalProject/contact.html">Contact</a></li>
-            </ul>
-            <button id="closeButton" class="close-btn"><i class="fa-solid fa-xmark"></i></button> 
-        </nav>
+            <div class="spacer"></div> <!-- ← この要素が間を押し広げる -->
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="../FinalProject/project.html">Projects</a></li>
+                    <li><a href="../FinalProject/resume.html">Resume</a></li>
+                    <li><a href="../FinalProject/volunteer.html">Volunteer Experience</a></li>
+                    <li><a href="../FinalProject/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="toggleButton">
+                <i id="barIcon" class="fa-solid fa-bars"></i>
+            </button>
+
+    </header>
         
         <div class="intro">
             <img id="introimg" src="images/intro.JPG" alt="Momoka Oishi">
@@ -59,6 +62,14 @@
                 <img src="images/bass1.jpg" alt="Momoka playing the electric bass">
                 <img src="images/bass2.jpg" alt="Momoka playing the double bass">
             </div>
+        
+            <h2>Ask Me Anything!</h2>
+            <div class="buttons">
+                <button class="java" onclick="answer('from')">Where are you from?</button>
+                <button class="java" onclick="answer('study')">What do you study?</button>
+                <button class="java" onclick="answer('fun')">Why did you start playing the bass?</button>
+            </div>
+            <p id="response"></p>
         </main>
 
         <footer>

@@ -10,8 +10,8 @@
     <body>
         <header>
             <a href="../FinalProject/home.html">Momoka Oishi</a>
-            <button id="toggleButton"><i id="bar" class="fa-solid fa-bars"></i></button>
-        </header>
+            <div class="spacer"></div>
+            <button id="toggleButton"><i id="barIcon" class="fa-solid fa-bars"></i></button>
         <nav id="nav-bar">
             <ul>
                 <li><a href="../FinalProject/project.html">Projects</a></li>
@@ -19,15 +19,35 @@
                 <li><a href="../FinalProject/volunteer.html">Volunteer Experience</a></li>
                 <li><a href="../FinalProject/contact.html">Contact</a></li>
             </ul>
-            <button id="closeButton" class="close-btn"><i class="fa-solid fa-xmark"></i></button> 
         </nav>
+        </header>
         
-        <main class="fix">
-            <h2>Contact</h2>
-            <P>
-                Feel free to get in touch with me!<br>
-                Email: oishimmk@gmail.com
-            </P>
+        <main>
+            <div class="contactcontainer">
+                <div>
+                    <h2>Contact</h2>
+                    <P class="contact">
+                        Feel free to get in touch with me!<br>
+                        Email: oishimmk@gmail.com
+                    </P>
+                </div>  
+
+                <div class="form-container">
+                    <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" required></textarea>
+                
+                    <button type="submit">Send</button>
+                    </form>
+                    <p id="formMessage"></p>
+                </div>
+            </div>
             
         </main>
 
