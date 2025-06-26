@@ -147,6 +147,14 @@ p {
     width: 470px;
 }
 
+.aboutme p {
+    width: 460px;
+}
+
+.mainlayout p {
+    width: 460px;
+}
+
 img {
     width: 400px;
     display: block;
@@ -305,10 +313,15 @@ h4 {
     margin-bottom: 2rem;
 }
 
+.he2, .hresume, .education p, .work p, .award p, h4 {
+    padding-left: 10px;
+}
+
 
 
 @media screen and (min-width: 768px) {
     #introimg {
+    
         width: 600px;
     }
 
@@ -318,6 +331,14 @@ h4 {
     }
 
     p {
+        width: 650px;
+    }
+
+    .aboutme {
+        width: 650px;
+    }
+
+    .mainlayout p {
         width: 650px;
     }
   
@@ -340,6 +361,10 @@ h4 {
 
     #response {
         text-align: center;
+    }
+
+    .he2, .hresume, .education p, .work p, .award p, h4 {
+        padding-left: 0;
     }
 
 }
