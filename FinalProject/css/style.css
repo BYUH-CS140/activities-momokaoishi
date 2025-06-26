@@ -450,21 +450,18 @@ h4 {
         display: flex;
         justify-content: center;  
         align-items: center;
-        margin: 0 auto 4.5rem auto; 
-        text-align: left;
-        max-width: 1400px;         
+        text-align: left;         
     }
 
     .projects p {
         margin-left: 18rem;
-        width: 580px;
         padding-right: 20px;
     }
 
-    .projects h3 {
-        margin-left: 18rem;
-        width: 580px;
-    }
+    .project-container {
+        max-width: 1400px;
+        margin: 0 auto 4.5rem auto;  /* 中央寄せ、下マージン */
+      }
 
     .links {
         margin-right: 16rem;
@@ -545,6 +542,10 @@ h4 {
     .award p {
         grid-area: item3;
         width: 450px;
+    }
+
+    .work p {
+        margin-bottom: 2rem;
     }
 
     .award {
