@@ -401,9 +401,10 @@ h4 {
     }
 
     h1 {
-        font-size: 30px;
-        width: 35%;
+        font-size: 33px;
+        min-width: 35%;
         padding-right: 4rem;
+    
     }
 
     h2 {
@@ -503,7 +504,7 @@ h4 {
         justify-content: center;
         width: 1300px;
         gap: 3rem;
-        margin: 1.5rem auto;
+        margin: 3rem auto;
     }
 
     .contact {
@@ -561,6 +562,14 @@ h4 {
         margin: 0.5rem auto;
         gap: 1.5rem;
         width: 1050px;
+    }
+
+    .aboutme p {
+        width: 660px;
+    }
+
+    .he2 {
+        margin-top: 4rem;
     }
 }   
 
